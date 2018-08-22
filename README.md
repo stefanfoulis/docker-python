@@ -24,3 +24,25 @@ Tag commits with the desired Docker image tag, in the form::
 Then push the tags to GitHub to trigger an automatic build on Docker Cloud::
 
    git push --tags
+
+
+Configuration on docker hub / docker cloud
+------------------------------------------
+
+Go to cloud.docker.com and create a new repository. Connect it to the github 
+repo.
+Now configure a *Build Rules* like this:
+
+Source Type: Tag
+Source: ``/^.+$/``
+Docker Tag: ``{sourceref}``
+Dockerfile location: ``Dockerfile``
+Build Context: ``/``
+Autobuild: ``on``
+Build Caching: ``off``
+
+Now create a tag in git and push it to github whenever you want a docker image
+built.
+The tag should look like this: ``3.7-stretch-vX.xx``.
+The first part (``3.7-stretch``) will be the directory in the ``python`` folder
+that is built. The docker tag will be the same as the git tag.
