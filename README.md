@@ -41,6 +41,10 @@ Build Context: ``/``
 Autobuild: ``on``
 Build Caching: ``off``
 
+You could add a second entry with the only difference being the Docker Tag set to
+``{sourceref}-dev``. Then the image will be built with the build-arg
+``TARGET=dev``. Otherwise it will be ``TARGET=prod``.
+
 Now create a tag in git and push it to github whenever you want a docker image
 built.
 The tag should look like this: ``3.7-stretch-vX.xx``.
