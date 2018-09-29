@@ -1,11 +1,10 @@
-stefanfoulis/docker-python
-==========================
+# stefanfoulis/docker-python
+
 
 Opinionated base images for python projects with some useful tools pre-installed.
 
 
-Locally build an image
-----------------------
+## Locally build an image
 
 To locally build an image, run the following command::
 
@@ -14,8 +13,7 @@ To locally build an image, run the following command::
 Check `./build.py --help` for additional information.
 
 
-Release process
----------------
+## Release process
 
 Tag commits with the desired Docker image tag, in the form::
 
@@ -26,8 +24,7 @@ Then push the tags to GitHub to trigger an automatic build on Docker Cloud::
    git push --tags
 
 
-Configuration on docker hub / docker cloud
-------------------------------------------
+## Configuration on docker hub / docker cloud
 
 Go to cloud.docker.com and create a new repository. Connect it to the github 
 repo.
