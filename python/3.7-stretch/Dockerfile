@@ -1,4 +1,4 @@
-FROM python:3.7.0-stretch
+FROM python:3.7.4-stretch
 
 ENV PYTHONUNBUFFERED=1 \
     PIP_REQUIRE_VIRTUALENV=false \
